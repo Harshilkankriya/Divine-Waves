@@ -1,0 +1,414 @@
+/*For Mobile screens*/
+@media screen and (max-width: 768px) {
+    .logo {
+        padding: auto;
+        margin: auto;
+    }
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+
+    .nav-links {
+        flex-direction: wrap;
+        align-items: center;
+    }
+
+    .menu-button {
+        top: 10px;
+        right: 10px;
+    }
+
+    .product {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 100%;
+    }
+}
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    line-height: 1.6;
+    color: #4b2e19;
+    background: #f9f4ef;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+/* Header Styles */
+header {
+    background: #452813;
+    color: #fff;
+    padding: 1rem 0;
+    border-bottom: 5px solid #c29d70;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.logo {
+    padding: auto;
+    margin-right: auto;
+}
+.nav-links {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+}
+
+.nav-links li {
+    margin: 0 1rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #c29d70;
+    font-weight: bold;
+    font-family: 'Bronco', serif;
+    font-size: 27px;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+.menu-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #c29d70;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    z-index: 9999;
+}
+
+.menu-button span {
+    font-size: 24px;
+}
+
+/* Menu container (hidden by default) */
+.menu-container {
+    position: fixed;
+    top: 0;
+    right: -250px;  /* Initially off-screen */
+    background-color: #4a2f1b;
+    width: 250px;
+    height: 100%;
+    transition: right 0.3s ease-in-out;
+    box-shadow: -20px 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+}
+
+/* When the menu is active */
+.menu-container.open {
+    right: 0;
+}
+
+/* Hero Section */
+.hero {
+    background: url('./assets/images/homepage.png') no-repeat center center/cover;
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #f4dfc6;
+    border-bottom: 5px solid #c29d70;
+}
+
+@font-face {
+    font-family: 'Bronco';
+    src: url('./assets/fonts/bronco/BroncoPersonalUse.ttf') format('truetype');
+}
+
+.hero-content h1 {
+    font-family: 'Bronco';
+    font-size: 5rem;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.cta-button {
+    background: #c29d70;
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    scroll-behavior: smooth;
+}
+
+.cta-button:hover {
+    background: #a67b50;
+}
+
+/* Services Section */
+.services {
+    padding: 3rem 0;
+    background-image: url('./assets/images/services.png');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    text-align: center;
+    border-top: 10px solid #c29d70;
+    border-bottom: 10px solid #c29d70;
+}
+
+.services h2 {
+    font-family: 'Bronco';
+    font-size: 4rem;
+    margin-bottom: 2rem;
+    color: #4b2e19;
+}
+
+.service-cards-wrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.arrow {
+    background-color: #704214;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    font-size: 2rem;
+}
+
+.arrow.left {
+    left: 0;
+}
+
+.arrow.right {
+    right: 0;
+}
+
+.service-cards {
+    display: flex;
+    gap: 1rem;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+.service-cards a {
+    text-decoration: none;
+    color: #4b2e19;
+    font-family: 'Bronco', serif;
+    font-size: 20px;
+}
+
+.service-cards a:hover{
+    color: #f6e2c9;
+}
+
+.card {
+    background: #c29d70;
+    border: 1px solid #4b2e19;
+    border-radius: 5px;
+    width: 300px;
+    padding: 1rem;
+    margin: 1rem;
+    text-align: center;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    flex: 0 0 auto;
+}
+
+.card img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.card h3 {
+    font-family: 'Bronco';
+    font-size: 30px;
+    margin: 1rem 0 0.5rem;
+}
+
+/* About Section */
+.about {
+    padding: 3rem 0;
+    background: #f6e2c9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-top: 5px solid #c29d70;
+    border-bottom: 5px solid #c29d70;
+    font-family: 'Bronco';
+    font-size: 30px;
+}
+
+.about img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-top: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact Section */
+.contact {
+    padding: 3rem 0;
+    background: #f1e4d3;
+    text-align: center;
+    border-top: 5px solid #c29d70;
+}
+
+.contact h2 {
+    font-family: 'Bronco';
+    font-size: 50px;
+    margin-bottom: 2rem;
+    color: #4b2e19;
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#contact-form input,
+#contact-form textarea {
+    width: 90%;
+    max-width: 500px;
+    margin-bottom: 1rem;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: #fff;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#contact-form button {
+    background: #4b2e19;
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+#contact-form button:hover {
+    background: #2e1d12;
+}
+
+/* Footer */
+footer {
+    background: #4b2e19;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    border-top: 5px solid #c29d70;
+}
+
+/* Product Page */
+.product {
+    padding: 3rem 0;
+    background: #f6e2c9;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    border-top: 5px solid #c29d70;
+    border-bottom: 5px solid #c29d70;
+    font-family: 'Bronco';
+    font-size: 30px;
+}
+
+.product-image {
+    max-width: 100%;
+    border-radius: 10px;
+    margin: 2rem 1rem 2rem 1rem;
+}
+
+.product-image img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-info {
+    flex: 1 1 0%;
+    margin: 0 1rem 0 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.product-info h2 {
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
+.product-info p {
+    margin-bottom: 10px;
+    color: #333;
+    line-height: 1.6;
+}
+
+.product-info ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.product-info ul li {
+    margin-bottom: 5px;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.action-buttons a {
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1em;
+    text-align: center;
+    background-color: #8c6239;
+    color: white;
+    border: 1px solid #7d5a3b;
+    text-shadow: 1px 1px 1px #5a4636;
+    transition: background-color 0.3s ease;
+}
+.buy-now {
+    color: white;
+}
+.addtocart{
+    color: white;
+}
+.action-buttons a:hover {
+    opacity: 0.9;
+    background-color: #7d5a3b;
+}  
